@@ -8,12 +8,12 @@ function toggleIsRobot() {
     console.log("isRobot is now: " + isRobot);
 }
 // Add a button for toggling in your HTML
-buttonArea.innerHTML += '<button id="toggle-button">Toggle Robot Mode</button>';
 
 // Add an event listener to the button
 document.getElementById('toggle-button').addEventListener('click', toggleIsRobot);
 const { nowInSec, SkyWayAuthToken, SkyWayContext, SkyWayRoom, SkyWayStreamFactory, uuidV4 } = skyway_room;
 const buttonArea = document.getElementById('button-area');
+buttonArea.innerHTML += '<button id="toggle-button">Toggle Robot Mode</button>';
 const remoteMediaArea = document.getElementById('remote-media-area');
 const roomNameInput = document.getElementById('room-name');
 const myId = document.getElementById('my-id');
