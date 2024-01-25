@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamepad Status Viewer</title>
+    <style>
+       .axis-container {
+        margin-bottom: 10px;
+        }
+
+        .axis-value {
+        display: block;
+        margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Gamepad Status Viewer</h1>
+    <div id="start">Press any button on the gamepad to start.</div>
+    <div id="noDevices">No gamepad devices found. Please connect a gamepad.</div>
+    <p>ID: <span id="my-id"></span></p>
+    <div>
+      room name: <input id="room-name" type="text" />
+      <button id="join">join</button>
+    </div>
+    <video id="local-video" width="400px" muted playsinline></video>
+    <div id="button-area"></div>
+    <div id="remote-media-area"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@skyway-sdk/room/dist/skyway_room-latest.js"></script>
+
+    <script src="gamepadHandler.js"></script>
+    <script src="skyway.js"></script>
+
+</body>
+</html>
