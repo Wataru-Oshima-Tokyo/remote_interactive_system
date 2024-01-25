@@ -1,5 +1,17 @@
 // This could be set dynamically based on the device's role
-const isRobot = true; // Set this to false for the controller
+// Initial state of isRobot
+let isRobot = true; 
+
+// Function to toggle the isRobot value
+function toggleIsRobot() {
+    isRobot = !isRobot;
+    console.log("isRobot is now: " + isRobot);
+}
+// Add a button for toggling in your HTML
+buttonArea.innerHTML += '<button id="toggle-button">Toggle Robot Mode</button>';
+
+// Add an event listener to the button
+document.getElementById('toggle-button').addEventListener('click', toggleIsRobot);
 const { nowInSec, SkyWayAuthToken, SkyWayContext, SkyWayRoom, SkyWayStreamFactory, uuidV4 } = skyway_room;
 const buttonArea = document.getElementById('button-area');
 const remoteMediaArea = document.getElementById('remote-media-area');
